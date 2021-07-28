@@ -13762,7 +13762,7 @@ CK_RV SoftHSM::MechParamCheckRSAPKCSOAEP(CK_MECHANISM_PTR pMechanism)
 	}
 
 	CK_RSA_PKCS_OAEP_PARAMS_PTR params = (CK_RSA_PKCS_OAEP_PARAMS_PTR)pMechanism->pParameter;
-	if (params->hashAlg != CKM_SHA_1)
+	/*if (params->hashAlg != CKM_SHA_1)
 	{
 		// ERROR_MSG("hashAlg must be CKM_SHA_1");
 		return CKR_ARGUMENTS_BAD;
@@ -13771,7 +13771,7 @@ CK_RV SoftHSM::MechParamCheckRSAPKCSOAEP(CK_MECHANISM_PTR pMechanism)
 	{
 		// ERROR_MSG("mgf must be CKG_MGF1_SHA1");
 		return CKR_ARGUMENTS_BAD;
-	}
+	}*/
 	if (params->source != CKZ_DATA_SPECIFIED)
 	{
 		// ERROR_MSG("source must be CKZ_DATA_SPECIFIED");
