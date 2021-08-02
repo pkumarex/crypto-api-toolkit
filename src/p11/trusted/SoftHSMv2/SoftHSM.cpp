@@ -3526,7 +3526,7 @@ CK_RV SoftHSM::AsymDecryptInit(CK_SESSION_HANDLE hSession, CK_MECHANISM_PTR pMec
 				// DEBUG_MSG("pParameter must be of type CK_RSA_PKCS_OAEP_PARAMS");
 				return CKR_ARGUMENTS_BAD;
 			}
-			if (CK_RSA_PKCS_OAEP_PARAMS_PTR(pMechanism->pParameter)->hashAlg != CKM_SHA_1)
+			/*if (CK_RSA_PKCS_OAEP_PARAMS_PTR(pMechanism->pParameter)->hashAlg != CKM_SHA_1)
 			{
 				// DEBUG_MSG("hashAlg must be CKM_SHA_1");
 				return CKR_ARGUMENTS_BAD;
@@ -3535,7 +3535,7 @@ CK_RV SoftHSM::AsymDecryptInit(CK_SESSION_HANDLE hSession, CK_MECHANISM_PTR pMec
 			{
 				// DEBUG_MSG("mgf must be CKG_MGF1_SHA1");
 				return CKR_ARGUMENTS_BAD;
-			}
+			}*/
 
 			mechanism = AsymMech::RSA_PKCS_OAEP;
 			isRSA = true;
